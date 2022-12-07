@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>chainletd | Saga Andromeda - CLI Docs</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Saga AlphaNet Playground">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.7fe91f26.js" as="script"><link rel="preload" href="/assets/js/2.2cefba6c.js" as="script"><link rel="preload" href="/assets/js/14.b1c7affe.js" as="script"><link rel="prefetch" href="/assets/js/10.567cd52e.js"><link rel="prefetch" href="/assets/js/11.2d27d878.js"><link rel="prefetch" href="/assets/js/12.1fe68e3b.js"><link rel="prefetch" href="/assets/js/13.cdfa5cca.js"><link rel="prefetch" href="/assets/js/15.9265a6dd.js"><link rel="prefetch" href="/assets/js/16.c9e493a5.js"><link rel="prefetch" href="/assets/js/17.d5a778e8.js"><link rel="prefetch" href="/assets/js/18.a7de9d24.js"><link rel="prefetch" href="/assets/js/19.56cff4f7.js"><link rel="prefetch" href="/assets/js/20.db0e2013.js"><link rel="prefetch" href="/assets/js/3.04d92457.js"><link rel="prefetch" href="/assets/js/4.564a0eec.js"><link rel="prefetch" href="/assets/js/5.2b5b309b.js"><link rel="prefetch" href="/assets/js/6.ce308ead.js"><link rel="prefetch" href="/assets/js/7.55c0e100.js"><link rel="prefetch" href="/assets/js/8.d4590bda.js"><link rel="prefetch" href="/assets/js/9.7f871fad.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="saga.png" alt="Saga Andromeda - CLI Docs" class="logo"> <span class="site-name can-hide">Saga Andromeda - CLI Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/downloads.html" class="nav-link">
+  Downloads
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/downloads.html" class="nav-link">
+  Downloads
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Getting Started</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/" aria-current="page" class="sidebar-link">Getting Started</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>CLI Overview</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cli/0-overview.html" class="sidebar-link">Overview</a></li><li><a href="/cli/chainlet.html" class="sidebar-link">chainlet</a></li><li><a href="/cli/chainletd.html" aria-current="page" class="active sidebar-link">chainletd</a></li><li><a href="/cli/init.html" class="sidebar-link">init</a></li><li><a href="/cli/utils.html" class="sidebar-link">util</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>EVM Tools</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/evm-tools/01-remix.html" class="sidebar-link">Deploying with Remix</a></li><li><a href="/evm-tools/02-truffle.html" class="sidebar-link">Configuring with Truffle</a></li><li><a href="/evm-tools/03-hardhat.html" class="sidebar-link">Configuring with Hardhat</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="chainletd"><a href="#chainletd" class="header-anchor">#</a> <code>chainletd</code></h1> <p><code>chainletd</code> is the command used to access the <code>chainletd</code> command in each chainlet. It is also the daemon used to start each individual chainlet.</p> <div class="language- extra-class"><pre class="language-text"><code>saga chainletd --help
+Use the chainletd CLI. 
+
+eg.
+saga chainletd --name test status \
+saga chainletd --name test q bank total
+
+Usage:
+  saga chainletd [subcommand] [subcommand] [args] [flags]
+
+Flags:
+  -h, --help          help for chainletd
+  -n, --name string   Name of the chainlet (default &quot;test&quot;)
+
+Global Flags:
+  -l, --loglevel string   Log level (default &quot;info&quot;)
+</code></pre></div><p><code>chainletd</code> also utilizes cobra, so you would be able to access information about the available commands by either entering it in or adding <code>--help</code>.</p> <p>Note: when passing flags to the <code>chainletd</code> command, the respect series of commands following <code>chainletd</code> should be encapsulated in quotes.</p> <div class="language- extra-class"><pre class="language-text"><code>Chainlet Daemon
+
+Usage:
+  chainletd [command]
+
+Available Commands:
+  add-genesis-account Add a genesis account to genesis.json
+  collect-gentxs      Collect genesis txs and output a genesis.json file
+  config              Create or query an application CLI configuration file
+  debug               Tool for helping with debugging your application
+  export              Export state to JSON
+  gentx               Generate a genesis tx carrying a self delegation
+  help                Help about any command
+  index-eth-tx        Index historical eth txs
+  init                Initialize private validator, p2p, genesis, and application configuration files
+  keys                Manage your application's keys
+  migrate             Migrate genesis to a specified target version
+  query               Querying subcommands
+  rollback            rollback cosmos-sdk and tendermint state by one height
+  rosetta             spin up a rosetta server
+  start               Run the full node
+  status              Query remote node for status
+  tendermint          Tendermint subcommands
+  testnet             subcommands for starting or configuring local testnets
+  tx                  Transactions subcommands
+  validate-genesis    validates the genesis file at the default location or at the location passed as an arg
+  version             Print the application binary version information
+
+Flags:
+  -b, --broadcast-mode string    Transaction broadcasting mode (sync|async|block) (default &quot;sync&quot;)
+      --chain-id string          Specify Chain ID for sending Tx (default &quot;testnet&quot;)
+      --fees string              Fees to pay along with transaction; eg: 10aphoton
+      --from string              Name or address of private key with which to sign
+      --gas-adjustment float     adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
+      --gas-prices string        Gas prices to determine the transaction fee (e.g. 10aphoton)
+  -h, --help                     help for chainletd
+      --home string              directory for config and data (default &quot;/Users/b/.chainletd&quot;)
+      --keyring-backend string   Select keyring's backend (default &quot;os&quot;)
+      --log_format string        The logging format (json|plain) (default &quot;plain&quot;)
+      --log_level string         The logging level (trace|debug|info|warn|error|fatal|panic) (default &quot;info&quot;)
+      --node string              &lt;host&gt;:&lt;port&gt; to tendermint rpc interface for this chain (default &quot;tcp://localhost:26657&quot;)
+      --trace                    print out full stack trace on errors
+
+Use &quot;chainletd [command] --help&quot; for more information about a command.
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/cli/chainlet.html" class="prev">
+        chainlet
+      </a></span> <span class="next"><a href="/cli/init.html">
+        init
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7fe91f26.js" defer></script><script src="/assets/js/2.2cefba6c.js" defer></script><script src="/assets/js/14.b1c7affe.js" defer></script>
+  </body>
+</html>
